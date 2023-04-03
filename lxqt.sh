@@ -11,8 +11,9 @@ mv /etc/apt/sources.list /etc/apt/sources.list.bkp
 cp sources.list /etc/apt/sources.list
 apt update && apt upgrade -y
 
-# Get username
+# Get username and make builddir
 username=$(id -u -n 1000)
+builddir=$(pwd)
 
 # install lxqt desktop
 apt install -y lxqt-core
@@ -72,6 +73,15 @@ apt install -y papirus-icon-theme -t bullseye-backports
 # Papirus folder
 wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C yaru --theme Papirus-Dark
+
+# WhiteSur Icon Theme
+cd /home/$username
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+cd WhiteSur-icon-theme
+mkdir -p /home/$username/.local/share/icons
+./install.sh -d /home/$username/.local/share/icons
+cd .. && rm -rf WhiteSur-icon-theme
+cd builddir
 
 # Restricted extras
 apt install -y ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
