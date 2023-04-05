@@ -84,6 +84,16 @@ cd Mojave-gtk-theme
 ./install.sh -d /usr/share/themes
 cd .. && rm -rf Mojave-gtk-theme
 
+# White sur gtk theme
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git && cd WhiteSur-gtk-theme
+./install -d /usr/share/themes
+cd .. && rm -rf WhiteSur-gtk-theme
+
+# White sur qt theme
+git clone https://github.com/vinceliuice/WhiteSur-kde.git && cd WhiteSur-kde
+./install -f /usr/share/themes
+cd .. && rm -rf WhiteSur-kde
+
 # Restricted extras
 apt install -y ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 
