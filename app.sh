@@ -16,6 +16,14 @@ apt install -y pip ranger cmatrix espeak ncdu translate-shell rsync kdeconnect y
 # Browser of choice
 apt install -y firefox-esr
 
+# image viewer of choice
+apt autoremove lximage-qt
+apt install -y gpicview
+
+# clipboard manager
+apt autoremove qlipper
+apt install -y diodon
+
 # Torrent client
 apt install -y transmission-qt
 
