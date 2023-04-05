@@ -40,6 +40,8 @@ cp bash_aliases /home/$username/.bash_aliases
 
 # install login manager
 apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings slick-greeter lightdm-settings numlockx
+rm -rf /etc/lightdm
+cp -r lightdm /etc
 
 # own files
 chown -R $username:$username /home/$username
