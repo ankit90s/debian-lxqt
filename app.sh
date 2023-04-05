@@ -17,11 +17,11 @@ apt install -y pip ranger cmatrix espeak ncdu translate-shell rsync kdeconnect y
 apt install -y firefox-esr
 
 # image viewer of choice
-apt autoremove lximage-qt
+apt autoremove lximage-qt -y
 apt install -y gpicview
 
 # clipboard manager
-apt autoremove qlipper
+apt autoremove qlipper -y
 apt install -y diodon
 
 # Torrent client
@@ -94,12 +94,12 @@ cd .. && rm -rf Mojave-gtk-theme
 
 # White sur gtk theme
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git && cd WhiteSur-gtk-theme
-./install -d /usr/share/themes
+./install.sh -d /usr/share/themes
 cd .. && rm -rf WhiteSur-gtk-theme
 
 # White sur qt theme
 git clone https://github.com/vinceliuice/WhiteSur-kde.git && cd WhiteSur-kde
-./install -f /usr/share/themes
+./install.sh -f /usr/share/themes
 cd .. && rm -rf WhiteSur-kde
 
 # Restricted extras
