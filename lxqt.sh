@@ -41,6 +41,9 @@ cp Xresources /home/$username/.Xresources
 cp bashrc /home/$username/.bashrc
 cp bash_aliases /home/$username/.bash_aliases
 
+# install wallpapers
+./wallpaper.sh
+
 # install login manager
 apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings slick-greeter lightdm-settings numlockx
 rm -rf /etc/lightdm
