@@ -24,6 +24,9 @@ apt install -y exa
 # PDF reader of choice
 apt install -y evince
 
+# network manager
+apt install -y network-manager-gnome
+
 # setup starship
 wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
 tar -xvzf starship-x86_64-unknown-linux-musl.tar.gz
