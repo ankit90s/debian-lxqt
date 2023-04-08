@@ -9,7 +9,7 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 # fonts
-apt install -y fonts-indic fonts-noto-color-emoji fonts-roboto fonts-ubuntu fonts-ubuntu-title fonts-ubuntu-console unifont
+apt install -y fonts-indic fonts-noto-color-emoji fonts-roboto fonts-ubuntu fonts-ubuntu-title fonts-ubuntu-console unifont fonts-cantarell
 
 # Material Design Icon Fonts
 mkdir -p /usr/share/fonts/Material-fonts
