@@ -49,8 +49,15 @@ apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings slick-gr
 rm -rf /etc/lightdm
 cp -r settings/lightdm /etc
 
+# Copy grub file
+rm /etc/default/grub
+cp settings/grub /etc/default
+
 # own files
 chown -R $username:$username /home/$username
+
+# update grub
+update-grub
 
 echo 
 echo lxqt install complete, Reboot and Enjoy
