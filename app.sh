@@ -135,6 +135,9 @@ curl -s https://raw.githubusercontent.com/rizmut/libreoffice-style-sifr/master/i
 # install nvidia detect
 apt install -y nvidia-detect
 
+# install deb
+apt install -y deb/*
+
 # install build tools
 apt install -y intel-microcode build-essential linux-headers-$(uname -r)
 
