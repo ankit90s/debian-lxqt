@@ -79,7 +79,7 @@ apt install -y neovim geany
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$username/.vim/bundle/Vundle.vim
 
 # Papirus icon
-apt install -y papirus-icon-theme -t bullseye-backports
+# apt install -y papirus-icon-theme -t bullseye-backports
 
 # Papirus folder
 wget -qO- https://git.io/papirus-folders-install | sh
