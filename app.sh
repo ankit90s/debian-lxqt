@@ -56,7 +56,7 @@ systemctl enable avahi-daemon
 systemctl enable acpid
 
 # Panel of choice
-apt install -y xfce4-panel --no-install-recommends --no-install-suggests
+apt install -y xfce4-panel xfce4-pulseaudio-plugin --no-install-recommends --no-install-suggests
 
 # Docklike
 apt install -y xfce4-dev-tools libstartup-notification0-dev libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev
