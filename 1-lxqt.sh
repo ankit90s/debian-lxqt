@@ -21,6 +21,9 @@ apt install -y lxqt-core
 # Exa Installation
 apt install -y exa
 
+# install alacritty
+apt install -y alacritty
+
 # PDF reader of choice
 apt install -y evince
 
@@ -36,8 +39,15 @@ tar -xvzf starship-x86_64-unknown-linux-musl.tar.gz
 mv starship /usr/local/bin
 rm starship-x86_64-unknown-linux-musl.tar.gz
 
+# pfetch
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch
+install pfetch /usr/local/bin
+cd ..
+rm -rf pfetch
+
 # Copy xresources
-cp Xresources /home/$username/.Xresources
+# cp Xresources /home/$username/.Xresources
 # cp Xresources ~/.Xresources
 
 # copy bashrc and bash_aliases
@@ -45,7 +55,7 @@ cp bashrc /home/$username/.bashrc
 cp bash_aliases /home/$username/.bash_aliases
 
 # install wallpapers
-./wallpaper.sh
+./wallpapers.sh
 
 # install login manager
 apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings slick-greeter lightdm-settings numlockx

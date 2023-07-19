@@ -78,7 +78,7 @@ apt install -y redshift
 apt install -y arc-theme
 
 # Text editor
-apt install -y neovim geany
+apt install -y neovim geany micro
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$username/.vim/bundle/Vundle.vim
 
 # Papirus icon
@@ -89,39 +89,39 @@ wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C yaru --theme Papirus-Dark
 
 # Kvantum
-apt install -y qt5-style-kvantum
+# apt install -y qt5-style-kvantum
 
 # WhiteSur Icon Theme
-cd /home/$username
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
-cd WhiteSur-icon-theme
-mkdir -p /home/$username/.local/share/icons
-./install.sh -d /home/$username/.local/share/icons
-cd .. && rm -rf WhiteSur-icon-theme
-cd builddir
+# cd /home/$username
+# git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+# cd WhiteSur-icon-theme
+# mkdir -p /home/$username/.local/share/icons
+# ./install.sh -d /home/$username/.local/share/icons
+# cd .. && rm -rf WhiteSur-icon-theme
+# cd builddir
 
 # Mc Mojave-kde Theme
-git clone https://github.com/vinceliuice/McMojave-kde.git
-cd McMojave-kde
-./install.sh -d /usr/share/themes
-cd .. && rm -rf McMojave-kde
+# git clone https://github.com/vinceliuice/McMojave-kde.git
+# cd McMojave-kde
+# ./install.sh -d /usr/share/themes
+# cd .. && rm -rf McMojave-kde
 
 # Mojave gtk theme
-apt install -y gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin libglib2.0-dev libxml2-utils
-git clone https://github.com/vinceliuice/Mojave-gtk-theme.git
-cd Mojave-gtk-theme
-./install.sh -d /usr/share/themes
-cd .. && rm -rf Mojave-gtk-theme
+# apt install -y gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin libglib2.0-dev libxml2-utils
+# git clone https://github.com/vinceliuice/Mojave-gtk-theme.git
+# cd Mojave-gtk-theme
+# ./install.sh -d /usr/share/themes
+# cd .. && rm -rf Mojave-gtk-theme
 
 # White sur gtk theme
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git && cd WhiteSur-gtk-theme
-./install.sh -d /usr/share/themes
-cd .. && rm -rf WhiteSur-gtk-theme
+# git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git && cd WhiteSur-gtk-theme
+# ./install.sh -d /usr/share/themes
+# cd .. && rm -rf WhiteSur-gtk-theme
 
 # White sur qt theme
-git clone https://github.com/vinceliuice/WhiteSur-kde.git && cd WhiteSur-kde
-./install.sh -f /usr/share/themes
-cd .. && rm -rf WhiteSur-kde
+# git clone https://github.com/vinceliuice/WhiteSur-kde.git && cd WhiteSur-kde
+# ./install.sh -f /usr/share/themes
+# cd .. && rm -rf WhiteSur-kde
 
 # Restricted extras
 apt install -y ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
@@ -153,5 +153,8 @@ chown -R $username:$username /home/$username
 cd $builddir
 
 echo 
-echo Reboot and Enjoy
+echo REBOOTING NOW
 echo
+
+sleep 3s
+reboot
