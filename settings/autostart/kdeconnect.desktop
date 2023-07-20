@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=kdeconnect-indicator
+Name=kdeconnect
+Type=Application
+Version=1.0

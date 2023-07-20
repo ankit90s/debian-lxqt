@@ -149,6 +149,7 @@ apt install -y intel-microcode build-essential linux-headers-$(uname -r)
 cd /home/$username
 git clone https://github.com/ankit90s/dotconfig && cd dotconfig
 cp -r * /home/$username/.config
+cp -r /home/$username/settings/autostart /home/$username/.config
 chown -R $username:$username /home/$username
 cd $builddir
 

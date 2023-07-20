@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/home/ankit/.config/conky/Botein/start.sh
+Name=Conky
+Type=Application
+Version=1.0
