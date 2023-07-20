@@ -39,6 +39,11 @@ tar -xvzf starship-x86_64-unknown-linux-musl.tar.gz
 mv starship /usr/local/bin
 rm starship-x86_64-unknown-linux-musl.tar.gz
 
+# fast-cli
+wget https://github.com/ddo/fast/releases/download/v0.0.4/fast_linux_amd64 -O fast
+chmod +x fast
+mv fast /usr/local/bin
+
 # pfetch
 git clone https://github.com/dylanaraps/pfetch.git
 cd pfetch
