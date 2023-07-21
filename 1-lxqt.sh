@@ -31,7 +31,7 @@ apt install -y evince
 apt install -y network-manager-gnome
 
 # browser of choice
-apt install -y firefox-esr
+apt install -y firefox-esr chromium
 
 # setup starship
 wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
