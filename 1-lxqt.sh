@@ -59,6 +59,10 @@ rm -rf pfetch
 cp bashrc /home/$username/.bashrc
 cp bash_aliases /home/$username/.bash_aliases
 
+# Make ISO directory
+mkdir /home/$username/ISOs
+chown $username:$username /home/$username/*
+
 # install wallpapers
 ./wallpapers.sh
 
