@@ -22,8 +22,8 @@ apt install -y pip ranger cmatrix espeak ncdu translate-shell rsync kdeconnect y
 apt install -y firefox-esr
 
 # image viewer of choice
-apt autoremove lximage-qt -y
-apt install -y gpicview
+# apt autoremove lximage-qt -y
+# apt install -y gpicview
 
 # clipboard manager
 apt autoremove qlipper -y
