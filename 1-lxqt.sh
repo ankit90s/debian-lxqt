@@ -27,8 +27,11 @@ apt install -y alacritty
 # PDF reader of choice
 apt install -y evince
 
+# screenshot
+apt install -y screengrab
+
 # network manager
-apt install -y network-manager-gnome
+apt install -y nm-tray
 
 # browser of choice
 apt install -y firefox-esr chromium
