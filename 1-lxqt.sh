@@ -18,6 +18,19 @@ builddir=$(pwd)
 # install lxqt desktop
 apt install -y lxqt-core
 
+## Xfce4 packages installation
+echo -e "\e[1;32m Installing xfce desktop plugins \e[0m"
+apt install -y xfce4-panel --no-install-suggests --no-install-recommends
+apt install -y clipman xfce4-clipman-plugin
+apt install -y xfce4-power-manager
+apt install -y xfce4-appmenu-plugin
+apt install -y thunar-archive-plugin
+apt install -y xfce4-screenshooter
+apt install -y xfce4-whiskermenu-plugin
+wget https://mxrepo.com/mx/repo/pool/main/x/xfce4-docklike-plugin/xfce4-docklike-plugin_0.4.1-0.1~mx23+1_amd64.deb -O docklike.deb
+apt install -y ./docklike.deb
+rm docklike.deb
+
 # Exa Installation
 apt install -y exa
 
@@ -34,7 +47,7 @@ apt install -y screengrab
 apt install -y nm-tray
 
 # browser of choice
-apt install -y firefox-esr chromium
+apt install -y chromium
 
 # setup starship
 wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
@@ -59,15 +72,16 @@ rm -rf pfetch
 # cp Xresources ~/.Xresources
 
 # copy bashrc and bash_aliases
+echo -e "\e[1;32m Installing bashrc and bash aliases \e[0m"
 cp bashrc /home/$username/.bashrc
 cp bash_aliases /home/$username/.bash_aliases
+
+cp bashrc-root /root/.bashrc
+cp bash_aliases /root/.bash_aliases
 
 # Make ISO directory
 mkdir /home/$username/ISOs
 chown $username:$username /home/$username/*
-
-# install wallpapers
-./wallpapers.sh
 
 # install login manager
 apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings slick-greeter lightdm-settings numlockx
